@@ -1,0 +1,28 @@
+# CodeIgniter 4 standard ignores
+/public/uploads/*
+/writable/cache/*
+/writable/logs/*
+/writable/session/*
+/env
+/.env
+/.env.*
+
+# Composer
+/vendor/
+/composer.lock
+
+# Node
+/node_modules/
+/npm-debug.log*
+
+# PHPStorm & VSCode
+.idea/
+/.vscode/
+
+# Docker local override
+docker-compose.override.yml
+
+# Logi i backupy
+*.log
+*.bak
+*.swp

@@ -1,0 +1,29 @@
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: ci4_app
+    ports:
+      - "8088:80"
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - redis
+    environment:
+      - CI_ENVIRONMENT=production
+      - logger.threshold=2
+    networks:
+      - ci4_net
+
+  redis:
+    image: redis:alpine
+    container_name: ci4_redis_prod
+    ports:
+      - "6389:6379"
+    networks:
+      - ci4_net
+
+networks:
+  ci4_net:
