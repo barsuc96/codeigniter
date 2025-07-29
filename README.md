@@ -1,6 +1,6 @@
 
 endpoint: 
-posthttp://localhost:8088/api/coasters
+post http://localhost:8088/api/coasters
 body:{
   "liczba_personelu": 12,
   "liczba_klientow": 1000,
