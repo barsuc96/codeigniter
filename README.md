@@ -1,3 +1,26 @@
+
+endpoint: 
+post http://localhost:8088/api/coasters
+body:{
+  "liczba_personelu": 12,
+  "liczba_klientow": 1000,
+  "dl_trasy": 10000,
+  "godziny_od": "8:00",
+  "godziny_do": "18:00",
+  "nazwa": "a1"
+}
+post http://localhost:8088/api/coasters/1/wagons
+body{ "ilosc_miejsc": 2, "predkosc_wagonu": 1.22 , "liczba_personelu":1 }
+
+delete http://localhost:8088/api/coasters/coasters:1/wagons/1
+
+put http://localhost:8088/api/coasters/1
+body{
+  "liczba_personelu": 10}
+
+uruchomienie anlityki docker exec -it ci4_app php spark monitor:run
+
+
 # CodeIgniter 4 Framework
 
 ## What is CodeIgniter?
