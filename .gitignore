@@ -3,9 +3,7 @@
 /writable/cache/*
 /writable/logs/*
 /writable/session/*
-/env
-/.env
-/.env.*
+
 
 # Composer
 /vendor/
@@ -20,7 +18,7 @@
 /.vscode/
 
 # Docker local override
-docker-compose.override.yml
+# ocker-compose.override.yml
 
 # Logi i backupy
 *.log

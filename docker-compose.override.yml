@@ -1,0 +1,13 @@
+
+services:
+  app:
+    environment:
+      - CI_ENVIRONMENT=development
+      - logger.threshold=4
+  redis:
+    image: redis:alpine
+    container_name: ci4_redis_dev
+    ports:
+      - "6389:6379"
+    networks:
+      - ci4_net
